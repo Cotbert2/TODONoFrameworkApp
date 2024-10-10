@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+
+}
+.todo-task{
+    background-color: rgb(205, 168, 168);
+    width: 100%;
+    padding: 2rem;
+    margin: 1rem 3rem;
+}
+
+
+.task-view{
+    background-color: rgb(233, 242, 230);
+    width: 70%;
+    height: 60rem;
+}
+
+.task-maker{
+    background-color: brown;
+    width: 30%;
+    height: 60rem;
+}
+
+.df{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin:  auto 10%;
+}
+
+.deadline-label{
+    margin: auto 10%;
+}
+
+.save-button{
+    width: 80%;
+    margin: 10%;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: rgb(9, 92, 165);
+    color: white;
+}
+.save-button :hover{
+    background-color: rgb(215, 163, 19);
+
+}
+
+
+
+h3{
+    font-weight: 100;
+    font-size: 2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    margin: 1rem auto;
+}
+form{
+    display: block;
+}
+input{
+    width: 70%;
+    margin: 1rem 10%;
+    padding: 1rem;
+}
+
+
+.task{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: white;
+    border: solid;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.deleteButton{
+    width: 2rem;
+    height:  2rem;
+    background-color: rgb(209, 55, 55);
+    border: 1px;
+    border-radius: 0.5rem;
+}

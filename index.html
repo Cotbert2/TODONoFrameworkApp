@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>TODO list</title>
+</head>
+<body>
+    <div class="task-view" id="task-view">
+        <h3>My Tasks</h3>
+        <!--Sample Task-->
+        <section class="task">
+            <div>
+                <h4 class="title-task">My New Task</h4>
+                <p>Deadline : 2024-02-01</p>
+                <div class="description-task">This is  a new task that I have to do</div>
+            </div>
+            <div>
+                <button class="deleteButton"></button>
+            </div>
+        </section>
+    </div>
+    <div class="task-maker">
+        <h3>Add a new taks</h3> 
+        <form>
+            <input type="text" name="" id="name" placeholder="Task name" required>
+            <input type="text-area" id="description" placeholder="Task's description" required>
+            <div class="df">
+                <label for="hasDeadline">Has deadline</label>
+                <input type="checkbox" name="hasDeadline" id="hasDeadline">
+            </div>
+            <label for="date" class="deadline-label">Deadline</label>
+            <input type="date" name="date" id="date" required>
+            <button id="save-button" class="save-button">Save</button>
+        </form>
+    </div>
+    <!--Templates-->
+    <!--
+        <section class="container">
+            <div class="todo-task">
+                <p>test</p>
+            </div>
+            
+        </section>
+        -->
+
+</body>
+<script src="./main.js"></script>
+</html>
