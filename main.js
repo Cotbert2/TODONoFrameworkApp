@@ -22,7 +22,9 @@ class Task{
                 <div class="description-task">${description}</div>
             </div>
             <div>
-                <button class="deleteButton" onclick="markTaskAsDone(${id})"></button>
+                <button class="deleteButton" onclick="markTaskAsDone(${id})">
+                <img src="assets/img/trash-outline.svg" alt="trash" class="icon"/>
+                </button>
             </div>
         </section>`
     }

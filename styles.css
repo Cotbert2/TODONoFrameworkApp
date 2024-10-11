@@ -90,9 +90,11 @@ input{
 }
 
 .deleteButton{
-    width: 2rem;
-    height:  2rem;
+    width: 3rem;
+    height:  3rem;
+    padding: 0.3rem;
     background-color: #AE445A;
     border: 1px;
     border-radius: 0.5rem;
 }
+
