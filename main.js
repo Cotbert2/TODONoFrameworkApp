@@ -7,29 +7,14 @@ const deadlineInput = document.getElementById('date');
 const saveButton = document.getElementById('save-button');
 
 
-
-
-let taskTODO = [];
-
-
-const resetValues  = () => {
-
-}
-
-const getTaskInfo = (ev) => {
-    event.preventDefault();
-};
-
-
-
-
 class Task{
     constructor(viewContainer){
         console.log('init class');
         this.container = document.getElementById(viewContainer);
+        this.tasks = 0;
     }
 
-    generateTask = (title, description, deadline) => {
+    generateTask = (id, title, description, deadline) => {
         return `<section class="task">
             <div>
                 <h4 class="title-task">${title}</h4>
@@ -37,7 +22,7 @@ class Task{
                 <div class="description-task">${description}</div>
             </div>
             <div>
-                <button class="deleteButton"></button>
+                <button class="deleteButton" onclick="markTaskAsDone(${id})"></button>
             </div>
         </section>`
     }
@@ -45,7 +30,7 @@ class Task{
     updateViewTaskPannel  = () => {
         let currentTasks = '';
         taskTODO.forEach( (task, index) =>{
-            currentTasks += taskManager.generateTask(task.name, task.description, task.date);
+            currentTasks += taskManager.generateTask(task.id, task.name, task.description, task.date);
         })
         this.container.innerHTML = currentTasks;
     }
@@ -53,12 +38,26 @@ class Task{
 
 taskManager = new Task('task-view');
 
-//taskManager.generateTask('asd','','');
+let taskTODO = [];
+
+const markTaskAsDone = (identifier) => {
+    const position = taskTODO.map( element => element.id).indexOf(identifier);
+    taskTODO.splice(position,1 );
+    taskManager.updateViewTaskPannel();
+    console.log(`position ${position}`);
+}
+
+
+
+
+
+let lastId = 0;
 
 
 
 saveButton.addEventListener('click', (event) => {
     let newTask = {
+        id: 0,
         name : '',
         description : '',
         hasDeadLine : '',
@@ -66,6 +65,7 @@ saveButton.addEventListener('click', (event) => {
         done : false,
     }
     event.preventDefault();
+    newTask.id = ++lastId;
     newTask.name = nameInput.value;
     newTask.description = descriptionInput.value;
     newTask.hasDeadLine = checkboxInput.value;
